@@ -64,73 +64,75 @@
 
         const mediaLinks = [
 
-            { platform: "X", user: "@dunknatachai", type: "VIDEO", isNew: true, url: "https://x.com/dunknatachai/status/2070480437768790514", img: "https://pbs.twimg.com/profile_images/2010986167089643520/IBOkH_NZ_400x400.jpg" },
+            { platform: "X", user: "@dunknatachai", type: "VIDEO", url: "https://x.com/dunknatachai/status/2070480437768790514", img: "https://pbs.twimg.com/profile_images/2010986167089643520/IBOkH_NZ_400x400.jpg" },
             
-            { platform: "IG", user: "@armanibeauty", type: "REEL", isNew: true, url: "https://www.instagram.com/reel/DaC-1LOMT-i/", img: "https://yt3.googleusercontent.com/vG35Fc2VrAfC7hSeJuOaCrHQGf2ckFuUnAHTcGYIqHbHhAL20B8oyLg_qzq_YbVxinzESyoJtVE=s900-c-k-c0x00ffffff-no-rj" },
+            { platform: "IG", user: "@armanibeauty", type: "REEL", url: "https://www.instagram.com/reel/DaC-1LOMT-i/", img: "https://yt3.googleusercontent.com/vG35Fc2VrAfC7hSeJuOaCrHQGf2ckFuUnAHTcGYIqHbHhAL20B8oyLg_qzq_YbVxinzESyoJtVE=s900-c-k-c0x00ffffff-no-rj" },
 
-            { platform: "TIKTOK", user: "@armanibeauty", type: "VIDEO", isNew: true, url: "https://www.tiktok.com/@armanibeauty/video/7655658732730191136?is_from_webapp=1", img: "https://yt3.googleusercontent.com/vG35Fc2VrAfC7hSeJuOaCrHQGf2ckFuUnAHTcGYIqHbHhAL20B8oyLg_qzq_YbVxinzESyoJtVE=s900-c-k-c0x00ffffff-no-rj" },
+            { platform: "TIKTOK", user: "@armanibeauty", type: "VIDEO", url: "https://www.tiktok.com/@armanibeauty/video/7655658732730191136?is_from_webapp=1", img: "https://yt3.googleusercontent.com/vG35Fc2VrAfC7hSeJuOaCrHQGf2ckFuUnAHTcGYIqHbHhAL20B8oyLg_qzq_YbVxinzESyoJtVE=s900-c-k-c0x00ffffff-no-rj" },
 
-            { platform: "X", user: "@ELLEThailand", type: "PHOTO", isNew: true, url: "https://x.com/ellethailand/status/2070462511674171749", img: "https://pbs.twimg.com/profile_images/1988682146098409472/-wV8Ovst_400x400.jpg" },
+            { platform: "X", user: "@ELLEThailand", type: "PHOTO", url: "https://x.com/ellethailand/status/2070462511674171749", img: "https://pbs.twimg.com/profile_images/1988682146098409472/-wV8Ovst_400x400.jpg" },
 
-             { platform: "FB", user: "ELLE Thailand", type: "PHOTO", isNew: true, url: "https://www.facebook.com/ellethailandmagazine/posts/elledigitalcover-%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9C%E0%B8%B1%E0%B8%AA%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%82%E0%B8%94%E0%B8%94%E0%B9%80%E0%B8%94%E0%B9%88%E0%B8%99%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AA%E0%B9%80%E0%B8%99%E0%B9%88%E0%B8%AB%E0%B9%8C%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A5%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%AB%E0%B8%AD%E0%B8%A1-s%C3%AC-nude-bloom-%E0%B9%81/1309406628036847/", img: "https://pbs.twimg.com/profile_images/1988682146098409472/-wV8Ovst_400x400.jpg" },
+             { platform: "FB", user: "ELLE Thailand", type: "PHOTO", url: "https://www.facebook.com/ellethailandmagazine/posts/elledigitalcover-%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9C%E0%B8%B1%E0%B8%AA%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%82%E0%B8%94%E0%B8%94%E0%B9%80%E0%B8%94%E0%B9%88%E0%B8%99%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AA%E0%B9%80%E0%B8%99%E0%B9%88%E0%B8%AB%E0%B9%8C%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A5%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%AB%E0%B8%AD%E0%B8%A1-s%C3%AC-nude-bloom-%E0%B9%81/1309406628036847/", img: "https://pbs.twimg.com/profile_images/1988682146098409472/-wV8Ovst_400x400.jpg" },
 
-            { platform: "IG", user: "@ellebeautythailand", type: "PHOTO", isNew: true, url: "https://www.instagram.com/p/DaC_A4-ic63/?img_index=1", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF2NAqNrA0OaIvhFZ00c1Yj_wQGC5Z6TRcAieWPdfQWetbM_kBmSvUtiQ&s=10" },
+            { platform: "IG", user: "@ellebeautythailand", type: "PHOTO", url: "https://www.instagram.com/p/DaC_A4-ic63/?img_index=1", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF2NAqNrA0OaIvhFZ00c1Yj_wQGC5Z6TRcAieWPdfQWetbM_kBmSvUtiQ&s=10" },
 
-            { platform: "X", user: "@SECRET_Styled", type: "VIDEO", isNew: true, url: "https://x.com/SECRET_Styled/status/2070462604473168122", img: "https://pbs.twimg.com/profile_images/2004246500487155712/SuNzQI7w_400x400.jpg" },
+            { platform: "X", user: "@SECRET_Styled", type: "VIDEO", url: "https://x.com/SECRET_Styled/status/2070462604473168122", img: "https://pbs.twimg.com/profile_images/2004246500487155712/SuNzQI7w_400x400.jpg" },
             
-            { platform: "X", user: "@girlngloss", type: "PHOTO", isNew: true, url: "https://x.com/girlngloss/status/2070462078230348263", img: "https://pbs.twimg.com/profile_images/2018164743815753728/NIgRcrxW_400x400.jpg" },
+            { platform: "X", user: "@girlngloss", type: "PHOTO", url: "https://x.com/girlngloss/status/2070462078230348263", img: "https://pbs.twimg.com/profile_images/2018164743815753728/NIgRcrxW_400x400.jpg" },
 
-             { platform: "X", user: "@gangwayth", type: "PHOTO", isNew: true, url: "https://x.com/gangwayth/status/2070466646519771551?s=20", img: "https://pbs.twimg.com/profile_images/2065241423864311808/TL9BR9bn_400x400.jpg" },
+             { platform: "X", user: "@gangwayth", type: "PHOTO", url: "https://x.com/gangwayth/status/2070466646519771551?s=20", img: "https://pbs.twimg.com/profile_images/2065241423864311808/TL9BR9bn_400x400.jpg" },
 
              { platform: "X", user: "@ELLEThailand", type: "PHOTO", isNew: true, url: "https://x.com/ELLEThailand/status/2070470079532372430", img: "https://pbs.twimg.com/profile_images/1988682146098409472/-wV8Ovst_400x400.jpg" },
 
-             { platform: "IG", user: "@bazaarthailand", type: "PHOTO", isNew: true, url: "https://www.instagram.com/p/DaC_EUyE1ru/", img: "https://pbs.twimg.com/profile_images/1775782143383511040/iLZ32G62_400x400.jpg" },
+             { platform: "IG", user: "@bazaarthailand", type: "PHOTO", url: "https://www.instagram.com/p/DaC_EUyE1ru/", img: "https://pbs.twimg.com/profile_images/1775782143383511040/iLZ32G62_400x400.jpg" },
 
-            { platform: "X", user: "@voguebeautyTH", type: "ARTICLE", isNew: true, url: "https://x.com/voguebeautyTH/status/2070465484563292342", img: "https://pbs.twimg.com/profile_images/1717734850252419072/M64JaTS9_400x400.jpg" },
+            { platform: "X", user: "@voguebeautyTH", type: "ARTICLE", url: "https://x.com/voguebeautyTH/status/2070465484563292342", img: "https://pbs.twimg.com/profile_images/1717734850252419072/M64JaTS9_400x400.jpg" },
 
-            { platform: "X", user: "@EverydaynewsTH", type: "PHOTO", isNew: true, url: "https://x.com/EverydaynewsTH/status/2070471775310446640", img: "https://pbs.twimg.com/profile_images/2031372706625777664/qaZG99Ad_400x400.jpg" },
+            { platform: "X", user: "@EverydaynewsTH", type: "PHOTO", url: "https://x.com/EverydaynewsTH/status/2070471775310446640", img: "https://pbs.twimg.com/profile_images/2031372706625777664/qaZG99Ad_400x400.jpg" },
 
-            { platform: "X", user: "@LOfficielThai", type: "PHOTO", isNew: true, url: "https://x.com/LOfficielThai/status/2070472844686090698", img: "https://pbs.twimg.com/profile_images/1942505353666605056/ke6-xNWn_400x400.jpg" },
+            { platform: "X", user: "@LOfficielThai", type: "PHOTO", url: "https://x.com/LOfficielThai/status/2070472844686090698", img: "https://pbs.twimg.com/profile_images/1942505353666605056/ke6-xNWn_400x400.jpg" },
             
-            { platform: "X", user: "@ELLEThailand", type: "VIDEO", isNew: true, url: "https://x.com/ELLEThailand/status/2070478353665302737", img: "https://pbs.twimg.com/profile_images/1988682146098409472/-wV8Ovst_400x400.jpg" },
+            { platform: "X", user: "@ELLEThailand", type: "VIDEO", url: "https://x.com/ELLEThailand/status/2070478353665302737", img: "https://pbs.twimg.com/profile_images/1988682146098409472/-wV8Ovst_400x400.jpg" },
             
-            { platform: "IG", user: "@ellebeautythailand", type: "REEL", isNew: true, url: "https://www.instagram.com/p/DaDF51HpNr5/", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF2NAqNrA0OaIvhFZ00c1Yj_wQGC5Z6TRcAieWPdfQWetbM_kBmSvUtiQ&s=10" },
+            { platform: "IG", user: "@ellebeautythailand", type: "REEL", url: "https://www.instagram.com/p/DaDF51HpNr5/", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF2NAqNrA0OaIvhFZ00c1Yj_wQGC5Z6TRcAieWPdfQWetbM_kBmSvUtiQ&s=10" },
             
-            { platform: "IG", user: "@ellebeautythailand", type: "PHOTO", isNew: true, url: "https://www.instagram.com/p/DaCvXi8p5VX/", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF2NAqNrA0OaIvhFZ00c1Yj_wQGC5Z6TRcAieWPdfQWetbM_kBmSvUtiQ&s=10" },
+            { platform: "IG", user: "@ellebeautythailand", type: "PHOTO", url: "https://www.instagram.com/p/DaCvXi8p5VX/", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF2NAqNrA0OaIvhFZ00c1Yj_wQGC5Z6TRcAieWPdfQWetbM_kBmSvUtiQ&s=10" },
 
-             { platform: "X", user: "@pangmak2026", type: "PHOTO", isNew: true, url: "https://x.com/pangmak2026/status/2070476847129977118", img: "https://pbs.twimg.com/profile_images/2065453170231492608/7Y0NijqY_400x400.jpg" },
-
-             { platform: "IG", user: "@pangmak2026", type: "PHOTO", isNew: true, url: "https://www.instagram.com/p/DaDKty3FHyY/", img: "https://pbs.twimg.com/profile_images/2065453170231492608/7Y0NijqY_400x400.jpg" },
-
-             { platform: "FB", user: "@pangmak2026", type: "PHOTO", isNew: true, url: "https://www.facebook.com/100064319373426/posts/1497798505707448/?rdid=yAihKS9pUiEdMvDV#", img: "https://pbs.twimg.com/profile_images/2065453170231492608/7Y0NijqY_400x400.jpg" },
+             { platform: "X", user: "@pangmak2026", type: "PHOTO", url: "https://x.com/pangmak2026/status/2070476847129977118", img: "https://pbs.twimg.com/profile_images/2065453170231492608/7Y0NijqY_400x400.jpg" },
             
-            { platform: "IG", user: "@praewmag", type: "PHOTO", isNew: true, url: "https://www.instagram.com/p/DaC_EidEp3n/", img: "https://yt3.googleusercontent.com/hj8cgo2-mAnvMjAhf-ScdgxHyDxMFL8ZIPsTq5lGbcicyTH_84wfw74N7SFnjvfvrNIwM26i2w=s900-c-k-c0x00ffffff-no-rj" },
+             { platform: "X", user: "@pangmak2026", type: "PHOTO", url: "https://x.com/pangmak2026/status/2070490623094997387", img: "https://pbs.twimg.com/profile_images/2065453170231492608/7Y0NijqY_400x400.jpg" },
 
-            { platform: "IG", user: "@everydaynewsth", type: "PHOTO", isNew: true, url: "https://www.instagram.com/p/DaDG5cbS1Xv/", img: "https://pbs.twimg.com/profile_images/2031372706625777664/qaZG99Ad_400x400.jpg" },
+             { platform: "IG", user: "@pangmak2026", type: "PHOTO", url: "https://www.instagram.com/p/DaDKty3FHyY/", img: "https://pbs.twimg.com/profile_images/2065453170231492608/7Y0NijqY_400x400.jpg" },
 
-            { platform: "IG", user: "@jeban.beauty", type: "PHOTO", isNew: true, url: "https://www.instagram.com/p/DaDB3RHnwZ-/", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7VWW-LSbUByum14jOdAGP6q7DNL1qu8aVjomytDkOwmoFinTjrrFVWMk&s=10" },
+             { platform: "FB", user: "@pangmak2026", type: "PHOTO", url: "https://www.facebook.com/100064319373426/posts/1497798505707448/?rdid=yAihKS9pUiEdMvDV#", img: "https://pbs.twimg.com/profile_images/2065453170231492608/7Y0NijqY_400x400.jpg" },
+            
+            { platform: "IG", user: "@praewmag", type: "PHOTO", url: "https://www.instagram.com/p/DaC_EidEp3n/", img: "https://yt3.googleusercontent.com/hj8cgo2-mAnvMjAhf-ScdgxHyDxMFL8ZIPsTq5lGbcicyTH_84wfw74N7SFnjvfvrNIwM26i2w=s900-c-k-c0x00ffffff-no-rj" },
 
-            { platform: "IG", user: "@secret_styled", type: "PHOTO", isNew: true, url: "https://www.instagram.com/p/DaC_YhFCaME/", img: "https://pbs.twimg.com/profile_images/2004246500487155712/SuNzQI7w_400x400.jpg" },
+            { platform: "IG", user: "@everydaynewsth", type: "PHOTO", url: "https://www.instagram.com/p/DaDG5cbS1Xv/", img: "https://pbs.twimg.com/profile_images/2031372706625777664/qaZG99Ad_400x400.jpg" },
 
-            { platform: "IG", user: "@ellementhailand", type: "VIDEO", isNew: true, url: "https://www.instagram.com/p/DaDIqesS9Uc/", img: "https://pbs.twimg.com/profile_images/1991529661126569987/2lRwkUV7_400x400.jpg" },
+            { platform: "IG", user: "@jeban.beauty", type: "PHOTO", url: "https://www.instagram.com/p/DaDB3RHnwZ-/", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7VWW-LSbUByum14jOdAGP6q7DNL1qu8aVjomytDkOwmoFinTjrrFVWMk&s=10" },
 
-            { platform: "X", user: "@ElleMenThailand", type: "VIDEO", isNew: true, url: "https://x.com/ElleMenThailand/status/2070485305233477783?s=20", img: "https://pbs.twimg.com/profile_images/1991529661126569987/2lRwkUV7_400x400.jpg" },
+            { platform: "IG", user: "@secret_styled", type: "PHOTO", url: "https://www.instagram.com/p/DaC_YhFCaME/", img: "https://pbs.twimg.com/profile_images/2004246500487155712/SuNzQI7w_400x400.jpg" },
 
-            { platform: "IG", user: "@girl.n.gloss", type: "PHOTO", isNew: true, url: "https://www.instagram.com/p/DaC_B2qFM57/", img: "https://pbs.twimg.com/profile_images/2018164743815753728/NIgRcrxW_400x400.jpg" },
+            { platform: "IG", user: "@ellementhailand", type: "VIDEO", url: "https://www.instagram.com/p/DaDIqesS9Uc/", img: "https://pbs.twimg.com/profile_images/1991529661126569987/2lRwkUV7_400x400.jpg" },
 
-            { platform: "IG", user: "@cosmenet.in.th", type: "PHOTO", isNew: true, url: "https://www.instagram.com/p/DaC_Gx_ktMd/", img: "https://scontent.cdninstagram.com/v/t51.2885-19/468681397_2062145754220184_972065096754606136_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=101&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=CNkj-FDAvb4Q7kNvwEhElnl&_nc_oc=Adp6jGogkZ4UWKIjnw9R5-82we4AQLhGyNGofFC87gvXhi-NboLbysA0LFHBU0enKZxS-Vi8bhHB1-sjB9lZFStq&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_ss=7b6a8&oh=00_Af92X1Qj5cl1f2tuyE9jr_DYJoD9BWhIX0Qbpb873gQuNw&oe=6A443696" },
+            { platform: "X", user: "@ElleMenThailand", type: "VIDEO", url: "https://x.com/ElleMenThailand/status/2070485305233477783?s=20", img: "https://pbs.twimg.com/profile_images/1991529661126569987/2lRwkUV7_400x400.jpg" },
 
-            { platform: "IG", user: "@gangway.th", type: "VIDEO", isNew: true, url: "https://www.instagram.com/p/DaC_vI9hQ9y/", img: "https://pbs.twimg.com/profile_images/2065241423864311808/TL9BR9bn_400x400.jpg" },
+            { platform: "IG", user: "@girl.n.gloss", type: "PHOTO", url: "https://www.instagram.com/p/DaC_B2qFM57/", img: "https://pbs.twimg.com/profile_images/2018164743815753728/NIgRcrxW_400x400.jpg" },
 
-            { platform: "IG", user: "@gangway.th", type: "PHOTO", isNew: true, url: "https://www.instagram.com/p/DaDAySFAfih/", img: "https://pbs.twimg.com/profile_images/2065241423864311808/TL9BR9bn_400x400.jpg" },
+            { platform: "IG", user: "@cosmenet.in.th", type: "PHOTO", url: "https://www.instagram.com/p/DaC_Gx_ktMd/", img: "https://scontent.cdninstagram.com/v/t51.2885-19/468681397_2062145754220184_972065096754606136_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=101&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=CNkj-FDAvb4Q7kNvwEhElnl&_nc_oc=Adp6jGogkZ4UWKIjnw9R5-82we4AQLhGyNGofFC87gvXhi-NboLbysA0LFHBU0enKZxS-Vi8bhHB1-sjB9lZFStq&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_ss=7b6a8&oh=00_Af92X1Qj5cl1f2tuyE9jr_DYJoD9BWhIX0Qbpb873gQuNw&oe=6A443696" },
 
-            { platform: "IG", user: "@SECRET_Styled", type: "VIDEO", isNew: true, url: "https://www.instagram.com/p/DaC_R8ipQqS/", img: "https://pbs.twimg.com/profile_images/2004246500487155712/SuNzQI7w_400x400.jpg" },
+            { platform: "IG", user: "@gangway.th", type: "VIDEO", url: "https://www.instagram.com/p/DaC_vI9hQ9y/", img: "https://pbs.twimg.com/profile_images/2065241423864311808/TL9BR9bn_400x400.jpg" },
 
-            { platform: "X", user: "@mstarnewsth", type: "PHOTO", isNew: true, url: "https://x.com/mstarnewsth/status/2070479126713237985", img: "https://pbs.twimg.com/profile_images/2065239791265107968/6WJAgyYr_400x400.jpg" },
+            { platform: "IG", user: "@gangway.th", type: "PHOTO", url: "https://www.instagram.com/p/DaDAySFAfih/", img: "https://pbs.twimg.com/profile_images/2065241423864311808/TL9BR9bn_400x400.jpg" },
 
-            { platform: "FB", user: "ELLE Thailand", type: "VIDEO", isNew: true, url: "https://www.facebook.com/ellethailandmagazine/videos/elledigitalcover-%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%97%E0%B8%AD%E0%B8%94%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A3%E0%B8%B2%E0%B8%A7%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%9A%E0%B9%88%E0%B8%87%E0%B8%9A%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B9%83%E0%B8%88%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%AB%E0%B8%AD%E0%B8%A1-s%C3%AC-nude-bloo/4011993242437586/", img: "https://pbs.twimg.com/profile_images/1988682146098409472/-wV8Ovst_400x400.jpg" },
+            { platform: "IG", user: "@SECRET_Styled", type: "VIDEO", url: "https://www.instagram.com/p/DaC_R8ipQqS/", img: "https://pbs.twimg.com/profile_images/2004246500487155712/SuNzQI7w_400x400.jpg" },
 
-            { platform: "FB", user: "ELLE Thailand", type: "PHOTO", isNew: true, url: "https://www.facebook.com/ellethailandmagazine/photos/armani-beauty-%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B8%A7-3-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B9%82%E0%B8%94%E0%B8%94%E0%B9%80%E0%B8%94%E0%B9%88%E0%B8%99-%E0%B9%80%E0%B8%81%E0%B9%89%E0%B8%B2-%E0%B8%99%E0%B8%9E%E0%B9%80%E0%B8%81%E0%B9%89%E0%B8%B2-%E0%B8%94%E0%B8%B1%E0%B8%87-%E0%B8%93%E0%B8%B1%E0%B8%8E%E0%B8%90%E0%B9%8C%E0%B8%90%E0%B8%8A%E0%B8%B1%E0%B8%A2-%E0%B9%81%E0%B8%A5%E0%B8%B0-%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B9%8C%E0%B8%A1-%E0%B8%A3%E0%B8%8A/1309387011372142/", img: "https://pbs.twimg.com/profile_images/1988682146098409472/-wV8Ovst_400x400.jpg" },
+            { platform: "X", user: "@mstarnewsth", type: "PHOTO", url: "https://x.com/mstarnewsth/status/2070479126713237985", img: "https://pbs.twimg.com/profile_images/2065239791265107968/6WJAgyYr_400x400.jpg" },
+
+            { platform: "FB", user: "ELLE Thailand", type: "VIDEO", url: "https://www.facebook.com/ellethailandmagazine/videos/elledigitalcover-%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%97%E0%B8%AD%E0%B8%94%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A3%E0%B8%B2%E0%B8%A7%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%9A%E0%B9%88%E0%B8%87%E0%B8%9A%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B9%83%E0%B8%88%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%AB%E0%B8%AD%E0%B8%A1-s%C3%AC-nude-bloo/4011993242437586/", img: "https://pbs.twimg.com/profile_images/1988682146098409472/-wV8Ovst_400x400.jpg" },
+
+            { platform: "FB", user: "ELLE Thailand", type: "PHOTO", url: "https://www.facebook.com/ellethailandmagazine/photos/armani-beauty-%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B8%A7-3-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B9%82%E0%B8%94%E0%B8%94%E0%B9%80%E0%B8%94%E0%B9%88%E0%B8%99-%E0%B9%80%E0%B8%81%E0%B9%89%E0%B8%B2-%E0%B8%99%E0%B8%9E%E0%B9%80%E0%B8%81%E0%B9%89%E0%B8%B2-%E0%B8%94%E0%B8%B1%E0%B8%87-%E0%B8%93%E0%B8%B1%E0%B8%8E%E0%B8%90%E0%B9%8C%E0%B8%90%E0%B8%8A%E0%B8%B1%E0%B8%A2-%E0%B9%81%E0%B8%A5%E0%B8%B0-%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B9%8C%E0%B8%A1-%E0%B8%A3%E0%B8%8A/1309387011372142/", img: "https://pbs.twimg.com/profile_images/1988682146098409472/-wV8Ovst_400x400.jpg" },
 
             
         ];    
