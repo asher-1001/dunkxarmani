@@ -28,46 +28,57 @@
     <main id="link-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full max-w-4xl mx-auto">
     </main>
 
-    <script>
-        const mediaLinks = [
-            { platform: "IG", user: "@dunknatachai", type: "PHOTO", isNew: true, url: "https://www.instagram.com/p/DUxcI9akw9y/?img_index=1", img: "https://pbs.twimg.com/profile_images/2010986167089643520/IBOkH_NZ_400x400.jpg" },
-            { platform: "IG", user: "@iconsiam", type: "REEL", isNew: true, url: "https://www.instagram.com/reels/DQL_norkhp6/", img: "https://pbs.twimg.com/profile_images/2065240160309256192/57wIYmgz_400x400.jpg" },
-            { platform: "X", user: "@dunknatachai", type: "PHOTO", isNew: false, url: "https://x.com/dunknatachai/status/1900141843918008434?s=20", img: "https://pbs.twimg.com/profile_images/2010986167089643520/IBOkH_NZ_400x400.jpg" },
-            { platform: "TikTok", user: "@iconsiam", type: "VIDEO", isNew: true, url: "https://www.tiktok.com/@iconic.iconsiam/video/7564721520984050952", img: "https://pbs.twimg.com/profile_images/2065240160309256192/57wIYmgz_400x400.jpg" },
-            { platform: "FB", user: "@iconsiam", type: "REEL", isNew: false, url: "https://www.facebook.com/reel/900402682310326/", img: "https://pbs.twimg.com/profile_images/2065240160309256192/57wIYmgz_400x400.jpg" }
-        ];
-
-        function renderCards(filter) {
-            const grid = document.getElementById('link-grid');
-            grid.innerHTML = '';
-            
-           const filtered = filter === 'all' ? mediaLinks : mediaLinks.filter(item => {
-    let platform = item.platform.toLowerCase();
-    // เพิ่มเงื่อนไขพิเศษสำหรับ FB
-    if (filter === 'facebook') return platform === 'fb';
-    return platform === filter;
-});
-            
-            filtered.forEach(item => {
-                grid.innerHTML += `
-                    <a href="${item.url}" target="_blank" class="flex items-center justify-between bg-white border border-stone-200 rounded-full px-4 py-2 hover:border-stone-400 transition-all duration-300">
-                        <div class="flex items-center gap-3">
-                            <img src="${item.img}" class="w-10 h-10 rounded-full object-cover shrink-0">
-                            <div class="flex flex-col">
-                                <div class="flex items-center gap-1.5 text-sm font-semibold">
-                                    <span class="text-[10px] bg-stone-100 px-1.5 py-0.5 rounded">${item.platform}</span>
-                                    ${item.user}
-                                </div>
-                                <span class="text-[10px] text-stone-500 uppercase">${item.type}</span>
-                            </div>
-                        </div>
-                        ${item.isNew ? '<span class="text-[10px] text-red-600 font-bold mr-2">★ NEW</span>' : ''}
-                    </a>
-                `;
-            });
+   <script>
+    // 1. นำฟังก์ชัน loadData ไปวางแทนที่ตัวแปร mediaLinks เดิม
+    async function loadData() {
+        try {
+            const response = await fetch('https://script.google.com/macros/s/AKfycbyHSlt97Cer3k-hzy7anw_Y1W4FAh1Aoqe6jMVl417oMjflSmWQ26ErJo1iDswTxXgC/exec');
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error("Error fetching data:", error);
+            return []; // คืนค่าว่างหากดึงข้อมูลไม่ได้
         }
+    }
 
-        renderCards('all');
-    </script>
+    // 2. แก้ไขฟังก์ชัน renderCards ให้เป็น async
+    async function renderCards(filter) {
+        const grid = document.getElementById('link-grid');
+        grid.innerHTML = '<p class="text-center text-stone-500">loading</p>'; // เพิ่มข้อความโหลด
+        
+        const mediaLinks = await loadData(); // รอข้อมูลจาก Google Sheets
+        grid.innerHTML = ''; // ลบข้อความโหลดออก
+        
+        const filtered = filter === 'all' ? mediaLinks : mediaLinks.filter(item => {
+            let platform = item.platform.toLowerCase();
+            if (filter === 'facebook') return platform === 'fb';
+            return platform === filter;
+        });
+        
+        filtered.forEach(item => {
+            // ตรวจสอบค่า isNew ให้เป็น boolean (บางครั้ง Google Sheet อาจส่งค่ามาเป็น string)
+            const isNew = String(item.isNew).toLowerCase() === 'true';
+            
+            grid.innerHTML += `
+                <a href="${item.url}" target="_blank" class="flex items-center justify-between bg-white border border-stone-200 rounded-full px-4 py-2 hover:border-stone-400 transition-all duration-300">
+                    <div class="flex items-center gap-3">
+                        <img src="${item.img}" class="w-10 h-10 rounded-full object-cover shrink-0">
+                        <div class="flex flex-col">
+                            <div class="flex items-center gap-1.5 text-sm font-semibold">
+                                <span class="text-[10px] bg-stone-100 px-1.5 py-0.5 rounded">${item.platform}</span>
+                                ${item.user}
+                            </div>
+                            <span class="text-[10px] text-stone-500 uppercase">${item.type}</span>
+                        </div>
+                    </div>
+                    ${isNew ? '<span class="text-[10px] text-red-600 font-bold mr-2">★ NEW</span>' : ''}
+                </a>
+            `;
+        });
+    }
+
+    // เริ่มทำงานครั้งแรก
+    renderCards('all');
+</script>
 </body>
 </html>
