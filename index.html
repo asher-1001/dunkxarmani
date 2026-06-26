@@ -22,7 +22,7 @@
         <button onclick="renderCards('ig')" class="px-4 py-1 text-sm uppercase hover:text-stone-500 transition">IG</button>
         <button onclick="renderCards('x')" class="px-4 py-1 text-sm uppercase hover:text-stone-500 transition">X</button>
         <button onclick="renderCards('tiktok')" class="px-4 py-1 text-sm uppercase hover:text-stone-500 transition">TikTok</button>
-        <button onclick="renderCards('fb')" class="px-4 py-1 text-sm uppercase hover:text-stone-500 transition">FB</button>
+        <button onclick="renderCards('facebook')" class="px-4 py-1 text-sm uppercase hover:text-stone-500 transition">FB</button>
     </nav>
 
     <main id="link-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full max-w-4xl mx-auto">
@@ -41,7 +41,11 @@
             const grid = document.getElementById('link-grid');
             grid.innerHTML = '';
             
-            const filtered = filter === 'all' ? mediaLinks : mediaLinks.filter(item => item.platform.toLowerCase() === filter);
+           const filtered = filter === 'all' ? mediaLinks : mediaLinks.filter(item => {
+    let platform = item.platform.toLowerCase();
+    // เพิ่มเงื่อนไขพิเศษสำหรับ FB
+    if (filter === 'facebook') return platform === 'fb';
+    return platform === filter;
 });
             
             filtered.forEach(item => {
