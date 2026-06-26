@@ -41,7 +41,12 @@
             const grid = document.getElementById('link-grid');
             grid.innerHTML = '';
             
-            const filtered = filter === 'all' ? mediaLinks : mediaLinks.filter(item => item.platform.toLowerCase() === filter);
+            const filtered = filter === 'all' ? mediaLinks : mediaLinks.filter(item => {
+    let platform = item.platform.toLowerCase();
+    // เพิ่มเงื่อนไขพิเศษสำหรับ FB
+    if (filter === 'facebook') return platform === 'fb';
+    return platform === filter;
+});
             
             filtered.forEach(item => {
                 grid.innerHTML += `
