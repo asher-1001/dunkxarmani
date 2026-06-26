@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUNK x ARMANI | Fashion Media</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#FAFAFA] text-[#1A1A1A] min-h-screen py-16 px-6">
+
+    <header class="mb-20 text-center">
+        <h1 class="font-serif text-5xl md:text-7xl tracking-tighter mb-6">DUNK x ARMANI</h1>
+        <div class="w-16 h-[1px] bg-black mx-auto"></div>
+    </header>
+
+    <nav class="flex flex-wrap justify-center gap-8 mb-20">
+        <button onclick="loadData('all')" class="hover:underline underline-offset-8">ALL</button>
+        <button onclick="loadData('ig')" class="hover:underline underline-offset-8">IG</button>
+        <button onclick="loadData('x')" class="hover:underline underline-offset-8">X</button>
+        <button onclick="loadData('tiktok')" class="hover:underline underline-offset-8">TIKTOK</button>
+        <button onclick="loadData('facebook')" class="hover:underline underline-offset-8">FACEBOOK</button>
+        <button onclick="loadData('article')" class="hover:underline underline-offset-8">ARTICLE</button>
+    </nav>
+
+    <main id="link-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20 w-full max-w-6xl mx-auto">
+        </main>
+
+    <script>
+        async function loadData(filter) {
+            const response = await fetch('data.json');
+            const data = await response.json();
+            const grid = document.getElementById('link-grid');
+            grid.innerHTML = '';
+            
+            const filtered = filter === 'all' ? data : data.filter(item => item.category === filter);
+            
+            filtered.forEach(item => {
+                grid.innerHTML += `
+                    <a href="${item.url}" target="_blank" class="block group hover:opacity-70 transition-opacity">
+                        <div class="aspect-[3/4] bg-slate-200 mb-6 overflow-hidden">
+                            <img src="${item.img}" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                        </div>
+                        <h3 class="font-serif text-xl mb-2">${item.title}</h3>
+                        <p class="font-sans text-xs uppercase tracking-widest text-slate-500">View Detail →</p>
+                    </a>
+                `;
+            });
+        }
+        loadData('all');
+    </script>
+</body>
+</html>

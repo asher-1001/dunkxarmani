@@ -1,0 +1,20 @@
+[
+  { 
+    "title": "Campaign Launch", 
+    "category": "ig", 
+    "url": "https://www.instagram.com/", 
+    "img": "https://picsum.photos/800/1200?1" 
+  },
+  { 
+    "title": "Runway Breakdown", 
+    "category": "tiktok", 
+    "url": "https://www.tiktok.com/", 
+    "img": "https://picsum.photos/800/1200?2" 
+  },
+  { 
+    "title": "Armani Privé Editorial", 
+    "category": "article", 
+    "url": "#", 
+    "img": "https://picsum.photos/800/1200?3" 
+  }
+]
